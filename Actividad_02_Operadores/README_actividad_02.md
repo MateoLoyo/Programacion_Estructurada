@@ -1,5 +1,3 @@
-# Actividad: Operadores
-
 ## Descripción
 
 Programas que demuestran el uso de operadores aritméticos, lógicos, relacionales, de incremento/decremento y de asignación en lenguaje C. Incluye ejercicios de identificación de errores, resolución de problemas con operadores y verificación de resultados.

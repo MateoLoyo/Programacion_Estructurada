@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Actividad XX: Nombre"
+permalink: /Actividad_XX_Nombre/
+---
 # Actividad: Tipos_Datos
 
 ## Descripción

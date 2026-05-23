@@ -1,4 +1,4 @@
-## Programación Estructurada
+# Programación Estructurada
 
 - **Nombre del estudiante:** Mateo Loyo Martinez
 - **Código:** 222478826

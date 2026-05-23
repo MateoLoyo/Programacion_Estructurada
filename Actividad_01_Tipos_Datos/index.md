@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Actividad XX: Nombre"
-permalink: /Actividad_XX_Nombre/
+title: "Actividad 01: Tipos de Datos"
 ---
+
 # Actividad: Tipos_Datos
 
 ## Descripción

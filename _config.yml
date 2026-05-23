@@ -1,16 +1,27 @@
 # Configuración Jekyll para GitHub Pages
-title: "Portafolio PE"
-description: "Repositorio de actividades y evidencias - Lenguaje C"
+title: "Programación Estructurada"
+description: "Portafolio de evidencias - Curso de Programación Estructurada en lenguaje C"
 author: "Mateo Loyo Martinez"
 theme: minima
 
+# Configuración del tema Minima
 minima:
   skin: classic
+  # Configuración de navegación social
+  social_links:
+    - platform: github
+      user_url: "https://github.com/MateoLoyo"
+      title: "GitHub de MateoLoyo"
 
+# Navegación principal - Enlaces en el header
 header_pages:
   - README.md
 
+# Plugins soportados por GitHub Pages
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# Configuración del sitio
+show_excerpts: false

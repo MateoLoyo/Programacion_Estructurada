@@ -1,11 +1,24 @@
-# _config.yml
+# ============================================
+# CONFIGURACIÓN GITHUB PAGES - JEKYLL
+# Mateo Loyo Martinez | 222478826 | D04
+# ============================================
+
+# --- Configuración básica ---
 title: "Portafolio Programación Estructurada"
-description: "Portafolio de evidencias - Mateo Loyo Martinez"
+description: "Portafolio de evidencias - Programación Estructurada en C"
 author: "Mateo Loyo Martinez"
 
-# CRÍTICO: Incluir carpetas que Jekyll podría ignorar
+# --- Tema (opcional, comenta si da problemas) ---
+# theme: minima
+
+# --- Build settings ---
+markdown: kramdown
+highlighter: rouge
+
+# --- CRÍTICO: Incluir carpetas que Jekyll ignora por defecto ---
+# Jekyll ignora carpetas con _, ., # o carpetas en node_modules/vendor
+# Las actividades NO empiezan con _, pero por seguridad las incluimos:
 include:
-  - Actividad_Extra_BattleShip
   - Actividad_01_Tipos_Datos
   - Actividad_02_Operadores
   - Actividad_03_Condicionales
@@ -18,12 +31,21 @@ include:
   - Actividad_10_Cadenas
   - Actividad_11_Estructuras
   - Actividad_12_Archivos
+  - Actividad_Extra_BattleShip
 
-# Desactivar procesamiento de Markdown para que no interfiera
-markdown: kramdown
-highlighter: rouge
-
-# Opcional: excluir archivos que no quieras publicar
+# --- Excluir archivos innecesarios ---
 exclude:
   - README.md
   - .github/
+  - Gemfile
+  - Gemfile.lock
+
+# --- Seguridad: desactivar plugins no soportados ---
+plugins: []
+
+# --- Variables personalizadas del estudiante ---
+estudiante:
+  nombre: "Mateo Loyo Martinez"
+  codigo: "222478826"
+  seccion: "D04"
+  profesor: "Jorge Ernesto Lopez Arce Delgado"

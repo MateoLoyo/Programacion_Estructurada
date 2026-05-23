@@ -1,16 +1,29 @@
-# Configuración Jekyll para GitHub Pages
-title: "Programación Estructurada"
-description: "Portafolio de evidencias - Curso de Programación Estructurada en lenguaje C"
+# _config.yml
+title: "Portafolio Programación Estructurada"
+description: "Portafolio de evidencias - Mateo Loyo Martinez"
 author: "Mateo Loyo Martinez"
-theme: minima
 
-minima:
-  skin: classic
+# CRÍTICO: Incluir carpetas que Jekyll podría ignorar
+include:
+  - Actividad_Extra_BattleShip
+  - Actividad_01_Tipos_Datos
+  - Actividad_02_Operadores
+  - Actividad_03_Condicionales
+  - Actividad_04_Ciclos
+  - Actividad_05_Funciones
+  - Actividad_06_Arreglos
+  - Actividad_07_Matrices
+  - Actividad_08_Punteros
+  - Actividad_09_Recursion
+  - Actividad_10_Cadenas
+  - Actividad_11_Estructuras
+  - Actividad_12_Archivos
 
-header_pages:
+# Desactivar procesamiento de Markdown para que no interfiera
+markdown: kramdown
+highlighter: rouge
+
+# Opcional: excluir archivos que no quieras publicar
+exclude:
   - README.md
-
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - .github/

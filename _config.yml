@@ -1,4 +1,23 @@
+# Configuración Jekyll para GitHub Pages
 title: "Programación Estructurada"
 description: "Repositorio de actividades y evidencias - Lenguaje C"
-theme: minima
 author: "Mateo Loyo Martinez"
+theme: minima
+
+# Configuración del tema Minima
+minima:
+  skin: classic
+
+# Navegación personalizada - Solo enlaces principales
+header_pages:
+  - README.md
+
+# Configuración de build
+show_excerpts: false
+github_username: MateoLoyo
+
+# Plugins soportados por GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

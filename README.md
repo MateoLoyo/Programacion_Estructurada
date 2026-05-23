@@ -1,4 +1,3 @@
-# Programación Estructurada
 - Nombre del estudiante: Mateo Loyo Martinez.
 - Código: 222478826.
 - Sección: D04.
@@ -19,6 +18,3 @@ Programación Estructurada en lenguaje C.
 - Memoria dinámica
 - Struct y union
 - Archivos
-
-
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/CVz_fNRg)

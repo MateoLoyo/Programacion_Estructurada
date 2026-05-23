@@ -1,94 +1,15 @@
 # Configuración Jekyll para GitHub Pages
-title: "Programación Estructurada"
+title: ""                          # Vacío para evitar título duplicado
 description: "Repositorio de actividades y evidencias - Lenguaje C"
 author: "Mateo Loyo Martinez"
 theme: minima
 
-# Configuración del tema Minima
 minima:
   skin: classic
 
-# Navegación - Solo el README principal aparece en el menú superior
 header_pages:
   - README.md
 
-# IMPORTANTE: Configurar Jekyll para que use READMEs como índices
-# Esto permite que README_actividad_XX.md funcione como página principal
-defaults:
-  - scope:
-      path: "Actividad_01_Tipos_Datos"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_01_Tipos_Datos/"
-  - scope:
-      path: "Actividad_02_Operadores"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_02_Operadores/"
-  - scope:
-      path: "Actividad_03_Condicionales"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_03_Condicionales/"
-  - scope:
-      path: "Actividad_04_Ciclos"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_04_Ciclos/"
-  - scope:
-      path: "Actividad_05_Arreglos"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_05_Arreglos/"
-  - scope:
-      path: "Actividad_06_Matrices"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_06_Matrices/"
-  - scope:
-      path: "Actividad_07_Cadenas"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_07_Cadenas/"
-  - scope:
-      path: "Actividad_08_Funciones"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_08_Funciones/"
-  - scope:
-      path: "Actividad_09_Punteros"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_09_Punteros/"
-  - scope:
-      path: "Actividad_10_Memoria_dinámica"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_10_Memoria_dinámica/"
-  - scope:
-      path: "Actividad_11_Struct_y_union"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_11_Struct_y_union/"
-  - scope:
-      path: "Actividad_12_Archivos"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: "/Actividad_12_Archivos/"
-
-# Plugins soportados por GitHub Pages
 plugins:
   - jekyll-feed
   - jekyll-sitemap

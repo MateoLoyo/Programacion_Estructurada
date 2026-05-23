@@ -1,4 +1,6 @@
-# Programación Estructurada
+---
+layout: default
+---
 
 - **Nombre del estudiante:** Mateo Loyo Martinez
 - **Código:** 222478826
@@ -13,7 +15,7 @@ Repositorio de actividades y evidencias desarrolladas durante el curso de Progra
 
 ---
 
-## Actividades del curso
+## 📚 Actividades del curso
 
 | # | Actividad | Enlace |
 |---|-----------|--------|
@@ -29,3 +31,7 @@ Repositorio de actividades y evidencias desarrolladas durante el curso de Progra
 | 10 | Memoria dinámica | [Ver actividad](./Actividad_10_Memoria_dinámica/) |
 | 11 | Struct y union | [Ver actividad](./Actividad_11_Struct_y_union/) |
 | 12 | Archivos | [Ver actividad](./Actividad_12_Archivos/) |
+
+---
+
+*Portafolio de evidencias - Programación Estructurada en C*

@@ -8,13 +8,9 @@ theme: minima
 minima:
   skin: classic
 
-# Navegación personalizada - Solo enlaces principales
+# Navegación - Solo el README principal aparece en el menú
 header_pages:
   - README.md
-
-# Configuración de build
-show_excerpts: false
-github_username: MateoLoyo
 
 # Plugins soportados por GitHub Pages
 plugins:

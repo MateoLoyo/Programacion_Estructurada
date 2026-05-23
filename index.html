@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Programación Estructurada en C</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: #f0f4f8;
+            color: #1a202c;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        .header {
+            background: #1e3a5f;
+            color: white;
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+        .header-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 4px 16px;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .header h1 {
+            font-size: clamp(22px, 5vw, 36px);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 28px;
+        }
+        .info-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .info-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 10px 18px;
+            text-align: left;
+            min-width: 160px;
+        }
+        .info-card .label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 3px;
+        }
+        .info-card .value {
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+        }
+        .stat {
+            padding: 16px 32px;
+            text-align: center;
+            border-right: 1px solid #e2e8f0;
+        }
+        .stat:last-child { border-right: none; }
+        .stat-num {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e3a5f;
+        }
+        .stat-label {
+            font-size: 11px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* CONTENT */
+        .content {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+
+        /* ACTIVITY GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: #3b82f6;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-num.extra {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        .card-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a202c;
+            line-height: 1.3;
+        }
+        .card-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: auto;
+        }
+        .tag {
+            background: #f1f5f9;
+            color: #475569;
+            border-radius: 6px;
+            font-size: 11px;
+            padding: 3px 8px;
+            font-weight: 500;
+        }
+        .card-link {
+            font-size: 13px;
+            color: #3b82f6;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* EXTRA CARD */
+        .card.special {
+            border: 1.5px solid #fbbf24;
+            background: linear-gradient(135deg, #fffbeb 0%, #fff 60%);
+        }
+        .card.special .card-num { background: #fef3c7; color: #92400e; }
+
+        /* FOOTER */
+        .footer {
+            background: #1e3a5f;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            margin-top: 60px;
+        }
+        .footer a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+        }
+        .footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-badge">Portafolio de Evidencias</div>
+        <h1>Programación Estructurada en C</h1>
+        <p>Universidad de Guadalajara · Ciclo 2024</p>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="label">Estudiante</div>
+                <div class="value">Mateo Loyo Martinez</div>
+            </div>
+            <div class="info-card">
+                <div class="label">Código</div>
+                <div class="value">222478826</div>
+            </div>
+            <div class="info-card">
+                <div class="label">Sección</div>
+                <div class="value">D04</div>
+            </div>
+            <div class="info-card">
+                <div class="label">Profesor</div>
+                <div class="value">Jorge E. Lopez Arce Delgado</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-num">12</div>
+            <div class="stat-label">Actividades</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">1</div>
+            <div class="stat-label">Proyecto extra</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">C</div>
+            <div class="stat-label">Lenguaje</div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="section-title">Actividades del curso</div>
+
+        <div class="grid">
+
+            <a class="card" href="./Actividad_01_Tipos_Datos/">
+                <div class="card-num">01</div>
+                <div class="card-title">Tipos de datos</div>
+                <div class="card-topics">
+                    <span class="tag">int / float / char</span>
+                    <span class="tag">sizeof</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_02_Operadores/">
+                <div class="card-num">02</div>
+                <div class="card-title">Operadores</div>
+                <div class="card-topics">
+                    <span class="tag">Aritméticos</span>
+                    <span class="tag">Lógicos</span>
+                    <span class="tag">Relacionales</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_03_Condicionales/">
+                <div class="card-num">03</div>
+                <div class="card-title">Condicionales</div>
+                <div class="card-topics">
+                    <span class="tag">if / else</span>
+                    <span class="tag">switch</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_04_Ciclos/">
+                <div class="card-num">04</div>
+                <div class="card-title">Ciclos</div>
+                <div class="card-topics">
+                    <span class="tag">for</span>
+                    <span class="tag">while</span>
+                    <span class="tag">do-while</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_05_Arreglos/">
+                <div class="card-num">05</div>
+                <div class="card-title">Arreglos</div>
+                <div class="card-topics">
+                    <span class="tag">Arrays 1D</span>
+                    <span class="tag">Búsqueda</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_06_Matrices/">
+                <div class="card-num">06</div>
+                <div class="card-title">Matrices</div>
+                <div class="card-topics">
+                    <span class="tag">Arrays 2D</span>
+                    <span class="tag">Operaciones</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_07_Cadenas/">
+                <div class="card-num">07</div>
+                <div class="card-title">Cadenas</div>
+                <div class="card-topics">
+                    <span class="tag">string.h</span>
+                    <span class="tag">char[]</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_08_Funciones/">
+                <div class="card-num">08</div>
+                <div class="card-title">Funciones</div>
+                <div class="card-topics">
+                    <span class="tag">Parámetros</span>
+                    <span class="tag">Recursión</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_09_Punteros/">
+                <div class="card-num">09</div>
+                <div class="card-title">Punteros</div>
+                <div class="card-topics">
+                    <span class="tag">* y &amp;</span>
+                    <span class="tag">Aritmética</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_10_Memoria_dinámica/">
+                <div class="card-num">10</div>
+                <div class="card-title">Memoria dinámica</div>
+                <div class="card-topics">
+                    <span class="tag">malloc</span>
+                    <span class="tag">free</span>
+                    <span class="tag">realloc</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_11_Struct_y_union/">
+                <div class="card-num">11</div>
+                <div class="card-title">Struct y union</div>
+                <div class="card-topics">
+                    <span class="tag">struct</span>
+                    <span class="tag">union</span>
+                    <span class="tag">typedef</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+            <a class="card" href="./Actividad_12_Archivos/">
+                <div class="card-num">12</div>
+                <div class="card-title">Archivos</div>
+                <div class="card-topics">
+                    <span class="tag">fopen / fclose</span>
+                    <span class="tag">fprintf</span>
+                </div>
+                <div class="card-link">Ver actividad →</div>
+            </a>
+
+        </div>
+
+        <div class="section-title">Proyecto extra</div>
+
+        <div class="grid">
+            <a class="card special" href="./Actividad_Extra_BattleShip/">
+                <div class="card-num extra">★</div>
+                <div class="card-title">BattleShip — Batalla Naval</div>
+                <div class="card-topics">
+                    <span class="tag">Matrices</span>
+                    <span class="tag">Funciones</span>
+                    <span class="tag">Archivos</span>
+                </div>
+                <div class="card-link">Ver proyecto →</div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Mateo Loyo Martinez · 222478826 · Sección D04 ·
+        <a href="https://github.com/MateoLoyo/Programacion_Estructurada">GitHub</a>
+    </div>
+
+</body>
+</html>

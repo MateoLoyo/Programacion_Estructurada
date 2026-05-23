@@ -1,0 +1,57 @@
+ACTIVIDAD: BATTLESHIP
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+DESCRIPCION:
+Juego de Batalla Naval para 2 jugadores en tablero 5x5.
+
+FASE DE PREPARACION:
+- Cada jugador coloca 2 fragatas (ocupan 1 casilla) y 2 buques (ocupan 2 casillas)
+- Las casillas deben estar dentro del rango 0-4
+- Las casillas del buque deben ser adyacentes (horizontal o vertical)
+- No se permiten casillas ocupadas
+
+FASE DE COMBATE:
+- Los jugadores se turnan para disparar
+- Si acierta (impacta barco), obtiene turno extra
+- Si falla (agua), pasa el turno al otro jugador
+- El primero en acumular 6 impactos gana la partida
+
+SIMBOLOS DEL TABLERO:
+- ~ = Agua (oculto en tablero de disparos)
+- 0 = Agua descubierta (disparo fallido)
+- 1 = Fragata sin descubrir
+- 3 = Fragata hundida
+- 4 = Buque sin descubrir
+- 5 = Buque hundido
+- X = Barco impactado (en tablero de disparos)
+
+FUNCIONES PRINCIPALES:
+- LeerEntero(): Lee y valida numeros enteros del usuario
+- Inicializacion(): Inicializa tableros en '0' y muestra titulo ASCII
+- MostrarTablero(): Muestra tablero propio con ubicacion de barcos
+- TableroDeDisparos(): Muestra tablero enemigo ocultando barcos no descubiertos
+- fragata(): Coloca una fragata de 1 casilla
+- Buque(): Coloca un buque de 2 casillas adyacentes
+- PonerBarco(): Coloca todos los barcos del jugador (2 fragatas + 2 buques)
+- Disparos(): Gestiona turno de disparo con turno extra si hay impacto
+- Ganador(): Muestra pantalla de victoria ASCII
+
+EJEMPLO DE JUEGO:
+- Jugador 1: Mateo Loyo
+- Jugador 2: Carlos Loyo
+- Mateo coloca sus barcos, Carlos coloca los suyos
+- Mateo dispara a Carlos: impacta fragata, turno extra, falla, pasa turno
+- Carlos dispara a Mateo: impacta buque, turno extra, impacta fragata
+- Carlos alcanza 6 impactos: gana la partida
+
+---
+
+CONCLUSION:
+El proyecto integra matrices bidimensionales para representar tableros,
+funciones para modularizar la logica del juego, validacion de datos para
+evitar entradas incorrectas, y punteros para contar impactos por referencia.
+La planificacion de la colocacion de barcos y la estrategia de disparos
+demuestran el uso practico de estructuras de control y manejo de estado
+en un programa interactivo completo.

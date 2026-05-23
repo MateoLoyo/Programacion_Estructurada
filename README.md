@@ -1,9 +1,7 @@
-# Programación Estructurada
-
-**Nombre del estudiante:** Mateo Loyo Martinez  
-**Código:** 222478826  
-**Sección:** D04  
-**Profesor:** Jorge Ernesto Lopez Arce Delgado
+- **Nombre del estudiante:** Mateo Loyo Martinez
+- **Código:** 222478826
+- **Sección:** D04
+- **Profesor:** Jorge Ernesto Lopez Arce Delgado
 
 ---
 
@@ -29,6 +27,31 @@ Repositorio de actividades y evidencias desarrolladas durante el curso de Progra
 | 10 | Memoria dinámica | [Ver actividad](./Actividad_10_Memoria_dinámica/) |
 | 11 | Struct y union | [Ver actividad](./Actividad_11_Struct_y_union/) |
 | 12 | Archivos | [Ver actividad](./Actividad_12_Archivos/) |
+| Extra | BattleShip | [Ver actividad](./Actividad_Extra_BattleShip/) |
+
+---
+
+## Temas trabajados
+
+- Tipos de datos
+- Operadores
+- Condicionales
+- Ciclos
+- Arreglos
+- Matrices
+- Cadenas
+- Funciones
+- Punteros
+- Memoria dinámica
+- Struct y union
+- Archivos
+
+---
+
+## Enlaces
+
+- [Repositorio en GitHub](https://github.com/MateoLoyo/Programacion_Estructurada)
+- [Sitio web del portafolio](https://mateoloyo.github.io/Programacion_Estructurada)
 
 ---
 

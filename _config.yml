@@ -1,7 +1,6 @@
-# Configuracion Jekyll para GitHub Pages
-# Dejar title vacio para que no aparezca en el header
-title: ""
-description: "Repositorio de actividades y evidencias - Lenguaje C"
+# Configuración Jekyll para GitHub Pages
+title: "Programación Estructurada"
+description: "Portafolio de evidencias - Curso de Programación Estructurada en lenguaje C"
 author: "Mateo Loyo Martinez"
 theme: minima
 

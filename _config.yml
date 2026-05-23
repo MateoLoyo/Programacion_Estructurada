@@ -1,51 +1,18 @@
-# ============================================
-# CONFIGURACIÓN GITHUB PAGES - JEKYLL
-# Mateo Loyo Martinez | 222478826 | D04
-# ============================================
-
-# --- Configuración básica ---
-title: "Portafolio Programación Estructurada"
-description: "Portafolio de evidencias - Programación Estructurada en C"
+# Configuracion Jekyll para GitHub Pages
+title: "Programacion Estructurada"
+# Dejar title vacio para que no aparezca en el header
+title: ""
+description: "Repositorio de actividades y evidencias - Lenguaje C"
 author: "Mateo Loyo Martinez"
+theme: minima
 
-# --- Tema (opcional, comenta si da problemas) ---
-# theme: minima
+minima:
+  skin: classic
 
-# --- Build settings ---
-markdown: kramdown
-highlighter: rouge
-
-# --- CRÍTICO: Incluir carpetas que Jekyll ignora por defecto ---
-# Jekyll ignora carpetas con _, ., # o carpetas en node_modules/vendor
-# Las actividades NO empiezan con _, pero por seguridad las incluimos:
-include:
-  - Actividad_01_Tipos_Datos
-  - Actividad_02_Operadores
-  - Actividad_03_Condicionales
-  - Actividad_04_Ciclos
-  - Actividad_05_Funciones
-  - Actividad_06_Arreglos
-  - Actividad_07_Matrices
-  - Actividad_08_Punteros
-  - Actividad_09_Recursion
-  - Actividad_10_Cadenas
-  - Actividad_11_Estructuras
-  - Actividad_12_Archivos
-  - Actividad_Extra_BattleShip
-
-# --- Excluir archivos innecesarios ---
-exclude:
+header_pages:
   - README.md
-  - .github/
-  - Gemfile
-  - Gemfile.lock
 
-# --- Seguridad: desactivar plugins no soportados ---
-plugins: []
-
-# --- Variables personalizadas del estudiante ---
-estudiante:
-  nombre: "Mateo Loyo Martinez"
-  codigo: "222478826"
-  seccion: "D04"
-  profesor: "Jorge Ernesto Lopez Arce Delgado"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

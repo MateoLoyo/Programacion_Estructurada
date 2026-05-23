@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redireccionando...</title>
+    <script>
+        // Redirigir URLs con mayúsculas/minúsculas incorrectas
+        var currentURL = window.location.href;
+        var path = window.location.pathname;
+
+        // Mapeo de URLs comunes con errores
+        var redirects = {
+            '/Actividad_Extra_BattleShip/': '/Actividad_Extra_BattleShip/',
+            '/actividad_extra_battleship/': '/Actividad_Extra_BattleShip/',
+            '/Actividad_10_Memoria_dinamica/': '/Actividad_10_Memoria_dinámica/',
+            '/Actividad_10_Memoria_dinámica/': '/Actividad_10_Memoria_dinámica/',
+            '/actividad_10_memoria_dinamica/': '/Actividad_10_Memoria_dinámica/',
+            '/Actividad_11_Struct_y_union/': '/Actividad_11_Struct_y_union/',
+            '/actividad_11_struct_y_union/': '/Actividad_11_Struct_y_union/'
+        };
+
+        // Buscar coincidencia sin importar mayúsculas
+        var lowerPath = path.toLowerCase();
+        for (var key in redirects) {
+            if (lowerPath === key.toLowerCase()) {
+                window.location.replace(redirects[key]);
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Página no encontrada</h1>
+    <p>Redireccionando...</p>
+    <p>Si no funciona, <a href="/Programacion_Estructurada/">vuelve al inicio</a></p>
+</body>
+</html>

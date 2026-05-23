@@ -1,0 +1,31 @@
+ACTIVIDAD 04: CICLOS
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+PROGRAMA 1: Ciclo For (For.c)
+Solicita cuántos números ingresar, los suma usando for con contador.
+Ejemplo: 2 números (1, 2) -> suma = 3
+
+PROGRAMA 2: Ciclo While (While.c)
+Suma números ingresados por el usuario hasta que ingrese 0.
+Ejemplo: 100, 1000, 10, 1, 0 -> suma = 1111
+
+PROGRAMA 3: Ciclo Do-While (DoWhile.c)
+Menú interactivo que se repite hasta que el usuario elige salir (opción 2).
+Ejemplo: opción 1 (continuar), opción 2 (salir) -> "Fin."
+
+PROGRAMA 4: Calculadora de Promedios (Calculadora_Promedios.c)
+Programa completo con menú, validación de datos y reporte:
+- Valida mínimo 1 materia (do-while)
+- Valida calificación 0-100 (do-while)
+- Calcula promedio, aprobadas, reprobadas y porcentajes (for)
+- Menú principal con do-while
+
+---
+
+CONCLUSION:
+Los ciclos permiten repetir instrucciones según condiciones. El for se usa 
+cuando se conoce el número de iteraciones. El while evalúa antes de entrar. 
+El do-while garantiza al menos una ejecución. La combinación de ciclos 
+anidados con condicionales permite crear programas interactivos y robustos.

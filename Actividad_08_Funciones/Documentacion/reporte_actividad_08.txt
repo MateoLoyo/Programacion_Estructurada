@@ -1,0 +1,28 @@
+ACTIVIDAD 08: FUNCIONES
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+PROGRAMA 1: Funciones Basicas (Funciones.c)
+Demuestra diferentes tipos de funciones:
+- sum(int a, int b): Funcion con retorno, pide datos y devuelve la suma.
+- cambiar(int x): Funcion void con paso por valor (no modifica original).
+- mostrar(int v[], int n): Funcion void que recibe arreglo y su tamano.
+- mostrarMatriz(int m[2][3]): Funcion void que recibe matriz 2x3.
+
+PROGRAMA 2: Funciones y Archivos (Funciones+Archivos.c)
+Programa modular que captura, filtra y guarda datos:
+- capturar(int v[], int n): Llena un arreglo de n elementos.
+- mostrar(int v[], int n): Imprime los elementos del arreglo.
+- filtrar(int origen[], int destino[], int n): Filtra numeros que no sean
+  multiplos de 2 ni de 3, y que sean <= 10. Devuelve el tamano del arreglo
+  filtrado y lo guarda en un archivo "resultado.txt".
+
+---
+
+CONCLUSION:
+Las funciones permiten modularizar el codigo, reutilizar logica y organizar
+el programa en bloques independientes. El paso por valor no modifica la
+variable original, mientras que pasar arreglos permite modificar su
+contenido. Combinar funciones con archivos facilita el procesamiento y
+almacenamiento de datos.

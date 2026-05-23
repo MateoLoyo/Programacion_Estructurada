@@ -1,0 +1,34 @@
+NOTAS: ARREGLOS Y DIRECCIONES DE MEMORIA
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+DIRECCIONES DE MEMORIA EN ARREGLOS
+
+Las direcciones de memoria son los espacios "prestados" que asigna la RAM 
+al momento de compilar nuestros codigos. Los numeros que se imprimen en 
+consola son las direcciones de memoria, y dependiendo del tamaño de nuestro 
+dato, sera la direccion que se imprime.
+
+En un arreglo, los elementos se almacenan de forma contigua en memoria. 
+Esto significa que cada elemento ocupa un espacio adyacente al anterior.
+
+TAMANO DE LOS TIPOS DE DATO
+
+- int y float: 4 bytes (32 bits) cada uno
+- char: 1 byte (8 bits), es el tipo de dato mas pequeno
+- double: 8 bytes (64 bits)
+
+SALTOS EN MEMORIA
+
+Los saltos que se dan en la memoria entre elementos de un arreglo son 
+debido al tamano del tipo de dato. Por ejemplo, en un arreglo de float 
+o int, los saltos se dan de 4 en 4 bytes, ya que cada elemento abarca 
+4 bytes.
+
+ARREGLOS DINAMICOS
+
+En C se pueden declarar arreglos con tamaño definido por el usuario 
+durante la ejecucion, como en Arreglos_2.c donde el usuario ingresa 
+el numero de temperaturas (N) y el arreglo temp[N] se crea con ese 
+tamano.

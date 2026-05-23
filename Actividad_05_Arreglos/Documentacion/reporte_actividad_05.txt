@@ -1,0 +1,20 @@
+ACTIVIDAD 05: ARREGLOS
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+PROGRAMA 1: Direcciones de Memoria (Arreglos.c)
+Declara variables float y un arreglo de 24 elementos para analizar 
+las direcciones de memoria asignadas por el compilador.
+
+PROGRAMA 2: Registro de Temperaturas (Arreglos_2.c)
+Solicita el número de temperaturas a registrar, las almacena en un 
+arreglo dinámico y las imprime con formato.
+
+---
+
+CONCLUSION:
+Los arreglos permiten almacenar múltiples valores del mismo tipo 
+bajo un solo nombre. Las direcciones de memoria se asignan de forma 
+contigua y los saltos dependen del tamaño del tipo de dato (4 bytes 
+para float e int).

@@ -1,0 +1,39 @@
+ACTIVIDAD 09: PUNTEROS
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+PROGRAMA 1: Punteros Basicos (Punteros.c)
+Demuestra los conceptos fundamentales de punteros:
+- Declaración de puntero: int *p;
+- Asignación de dirección: p = &x;
+- Dereferencia para leer valor: *p accede al valor de x (5)
+- Dereferencia para modificar valor: *p = 20 cambia x indirectamente
+- Impresión de direcciones de memoria con %p
+Ejemplo: x = 5, *p = 5; después *p = 20, x = 20
+
+PROGRAMA 2: Paso por Referencia (Paso_Referencia.c)
+Demuestra cómo modificar una variable original dentro de una función
+usando punteros (paso por referencia):
+- Función cambiar(int *x) recibe dirección de memoria
+- *x = 100 modifica el valor original en main()
+- En main() se pasa &a (dirección de a)
+Ejemplo: Antes a = 5, Después a = 100
+
+PROGRAMA 3: Arreglos y Punteros (Arreglos_Punteros.c)
+Demuestra la equivalencia entre notación de arreglos y punteros:
+- v es la dirección base (&v[0])
+- *v es equivalente a v[0]
+- *(v+1) es equivalente a v[1] (avanza sizeof(int) bytes)
+- *(v+2) es equivalente a v[2] (avanza 2 posiciones)
+Ejemplo: v = {10, 20, 30}; *v = 10, *(v+1) = 20, *(v+2) = 30
+
+---
+
+CONCLUSION:
+Los punteros son variables que almacenan direcciones de memoria. 
+Permiten acceder y modificar datos indirectamente mediante la dereferencia (*).
+El paso por referencia permite que las funciones modifiquen variables del 
+calling function. Los arreglos en C están íntimamente ligados a punteros: 
+el nombre del arreglo es un puntero a su primer elemento, y la aritmética 
+de punteros permite recorrerlo de forma equivalente a la indexación.

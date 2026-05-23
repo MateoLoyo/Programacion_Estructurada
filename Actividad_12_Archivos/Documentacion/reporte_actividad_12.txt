@@ -1,0 +1,43 @@
+ACTIVIDAD 12: ARCHIVOS
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+PROGRAMA 1: File Matriz (File_Martriz.c)
+Demuestra escritura y lectura de archivos con matrices de caracteres:
+- Declara matriz char Tablero[5][5] para el tablero
+- Llena el tablero con '~' (agua) usando ciclos anidados
+- Coloca elementos específicos: 'B' (barco), 'X' (impacto), '0' (agua)
+- Muestra el tablero en pantalla con printf
+- Lee nombre del usuario con fgets (incluye espacios)
+- Elimina salto de línea con strcspn(Nombre, "\n")
+- Abre archivo "TableroB.txt" en modo escritura ("w")
+- Guarda nombre del usuario, nombre fijo, y el tablero completo con fprintf
+- Cierra el archivo con fclose
+- Reabre el archivo en modo lectura ("r")
+- Lee las dos primeras líneas con fgets
+- Muestra los nombres leídos del archivo
+- Cierra el archivo con fclose
+Ejemplo: Tablero con ~, B, X, 0. Archivo TableroB.txt con nombre y tablero.
+
+PROGRAMA 2: Funciones y Archivos (Funciones+Archivos.c)
+Programa modular que captura, filtra y guarda datos:
+- capturar(int v[], int n): Llena arreglo de n elementos desde teclado
+- mostrar(int v[], int n): Imprime los elementos del arreglo
+- filtrar(int origen[], int destino[], int n): Filtra números impares,
+  no múltiplos de 3, y menores o iguales a 10. Retorna tamaño del
+  arreglo filtrado.
+- main(): Coordina captura, muestra original, filtra, muestra filtrado
+  y guarda resultado en "resultado.txt" usando fopen, fprintf, fclose.
+Ejemplo: Ingresa 1 2 3 4 5 13. Original: 1 2 3 4 5 13. Filtrado: 1 5.
+
+---
+
+CONCLUSION:
+Los archivos permiten persistir datos fuera del programa. fopen abre el
+archivo en modo escritura ("w"), lectura ("r") o append ("a"). fprintf
+escribe datos formateados, fgets lee línea por línea. Es obligatorio usar
+fclose para cerrar el archivo y evitar pérdida de datos. Combinar archivos
+con matrices permite guardar y recuperar tableros o datos estructurados.
+Las funciones modularizan el código para reutilizar lógica de captura,
+muestreo, filtrado y almacenamiento.

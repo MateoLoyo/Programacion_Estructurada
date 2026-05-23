@@ -1,0 +1,26 @@
+ACTIVIDAD 06: MATRICES
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+PROGRAMA 1: Tablero de Juego (Matriz.c)
+Crea dos matrices 3x3 para dos jugadores, inicializa con ceros y muestra 
+el tablero. Simula la base de un juego tipo batalla naval.
+
+PROGRAMA 2: Nombre Completo y Direcciones (Matriz_Nombre_Completo.c)
+Almacena nombre y apellidos en una matriz de caracteres, muestra las 
+direcciones de memoria de cada elemento y del arreglo completo. También 
+analiza direcciones de un arreglo char y un arreglo de enteros.
+
+PROGRAMA 3: Archivo con Matriz (File_Martriz.c)
+Crea un tablero 5x5 con caracteres, lo guarda en un archivo de texto 
+junto con el nombre del usuario, y luego lee el archivo para mostrar 
+su contenido.
+
+---
+
+CONCLUSION:
+Las matrices bidimensionales permiten representar datos en filas y columnas, 
+ideales para tableros y juegos. Las matrices de caracteres pueden almacenar 
+conjuntos de cadenas. El manejo de archivos permite persistir la información 
+de las matrices en disco.

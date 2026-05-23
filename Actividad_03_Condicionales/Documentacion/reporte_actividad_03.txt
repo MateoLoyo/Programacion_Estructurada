@@ -1,0 +1,39 @@
+ACTIVIDAD 03: CONDICIONALES
+Autor: Mateo Loyo Martinez | Fecha: 2026
+
+---
+
+PROGRAMA 1: Indicar Par (Indicar_Par.c)
+Solicita un numero entero e indica si es par (num%2==0).
+Ejemplo: 8 -> "tu Numero es par"
+
+PROGRAMA 2: Indicar Impar (Indicar_Impar.c)
+Solicita un numero entero e indica si es impar (num%2==1).
+Ejemplo: 9 -> "tu Numero es impar"
+
+PROGRAMA 3: Indicar Primo 0-10 (Indicar_Primo.c)
+Solicita un numero entre 0-10 e indica si es primo usando OR logico.
+Primos: 1, 2, 3, 5, 7
+Ejemplo: 4 -> "No es primo"
+
+PROGRAMA 4: Mayor de Edad (Mayor_Edad.c)
+Solicita la edad e indica si es mayor (>=18) o menor de edad.
+Ejemplo: 18 -> "Eres mayor de edad"
+
+PROGRAMA 5: Promedio Materias Reprobadas (Promedio_MateriasR.c)
+Evalua si obtienes beca: promedio>=85 Y materias reprobadas==0.
+Ejemplo: 85, 0 -> "obtienes la beca"
+
+PROGRAMA 6: Sistema de Validacion (Sistema_Validacion.c)
+Sistema completo con if-else if que evalua:
+- Promedio>=90, 0 materias reprobadas, edad>=18 -> beca
+- 1-2 materias reprobadas -> no beca, puedes reinscribirte
+- 3+ materias reprobadas -> no beca, situacion critica
+Ejemplo: 18 años, 95 promedio, 3 materias -> "Estas en situacion critica"
+
+---
+
+CONCLUSION:
+Las estructuras condicionales permiten controlar el flujo del programa 
+segun condiciones. Los operadores logicos (&&, ||) combinan multiples 
+condiciones. El if-else if permite evaluar varios casos en cascada.

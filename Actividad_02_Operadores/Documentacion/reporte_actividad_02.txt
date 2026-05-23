@@ -1,0 +1,87 @@
+================================================================================
+ACTIVIDAD 02: OPERADORES
+Autor: Mateo Loyo Martinez
+Fecha: 6/2/2026
+================================================================================
+
+1. EJERCICIO 1: Funcionamiento de Operadores (Act_2.c)
+--------------------------------------------------------------------------------
+Este programa demuestra el uso de operadores logicos, relacionales y de 
+asignacion combinados. Se declaran variables A=2, B=5, C=21 y se evaluan 
+expresiones complejas:
+
+- D = 30 < (C | (A += B)) ? 1 : 0  -> Operador ternario con OR bit a bit
+- E = C | (A += B)                  -> OR bit a bit
+- F = (E || D)                      -> OR logico
+
+Resultados de la ejecucion:
+- F = 1 (verdadero logico)
+- E = 29 (resultado del OR bit a bit)
+- E despues de ++E = 30
+- E despues de --E = 29
+- D = 0 (inicial), despues D++ = 1
+
+2. EJERCICIO 2: Identificar Error (IdentificarError.c)
+--------------------------------------------------------------------------------
+Programa que muestra un codigo con errores de sintaxis (llaves faltantes, 
+falta de identacion, falta de salto de linea) y su correccion.
+
+Errores identificados:
+- Falta llave de abrir en el bloque if
+- Falta llave de cerrar en el bloque if
+- Falta llave de abrir en el bloque else
+- Falta llave de cerrar en el bloque else
+- Falta identacion en los printf internos
+- Falta salto de linea (
+) en el printf final
+- El printf "fin" estaba dentro del else, debe estar fuera
+
+Correccion aplicada: Se agregaron todas las llaves, se idento el codigo 
+y se corrigio la estructura del if-else.
+
+Resultado: El programa imprime "x es mayor" y "fin" correctamente.
+
+3. EJERCICIO 3: Problemas con Operadores (ProblemasOperadores.c)
+--------------------------------------------------------------------------------
+Programa que resuelve 4 problemas para verificar el comportamiento de 
+diferentes operadores en C.
+
+Problema 1: Postfijo vs Prefijo
+- int a=3, b=4, c=a++ + --b;
+- Resultado: a=4, b=3, c=6
+- Explicacion: a++ usa el valor actual (3) y luego incrementa. --b decrementa 
+  primero (4->3) y luego usa el valor. c = 3 + 3 = 6.
+
+Problema 2: Jerarquia de Operaciones (Parentesis)
+- int x=10, y=3;
+- x + y * 2 = 10 + 6 = 16 (multiplicacion primero)
+- (x + y) * 2 = 13 * 2 = 26 (parentesis primero)
+- Explicacion: Los parentesis alteran la jerarquia natural de operaciones.
+
+Problema 3: Incremento Postfijo vs Prefijo
+- int i=5;
+- printf(i++) imprime 5, luego i=6
+- printf(++i) incrementa primero i=7, luego imprime 7
+- Resultado: 5 y 7
+- Explicacion: El postfijo guarda el valor para despues, el prefijo actua 
+  inmediatamente.
+
+Problema 4: Division Entera vs Flotante
+- int A=5, B=2;
+- float r = A / B;
+- Resultado: 2.00 (no 2.50)
+- Explicacion: Como A y B son int, la division es entera (5/2=2). 
+  El resultado 2 se convierte a float (2.00). Para obtener 2.50 se necesitaria 
+  forzar a float: float r = (float)A / B;
+
+================================================================================
+CONCLUSION
+================================================================================
+
+Los operadores en C tienen reglas especificas de jerarquia y comportamiento 
+que deben entenderse bien para evitar errores logicos. Los operadores de 
+incremento/decremento prefijo y postfijo tienen efectos diferentes segun 
+se usen en expresiones o de forma independiente. La division entre enteros 
+siempre produce un entero, truncando la parte decimal.
+
+================================================================================

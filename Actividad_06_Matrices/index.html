@@ -5,144 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 06: Matrices</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-            background: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            font-size: 1.3em;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        code {
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-        }
-        pre {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        pre code {
-            background: transparent;
-            color: inherit;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin: 5px 0;
-        }
-        .volver {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #3498db;
-        }
-        .volver a {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .volver a:hover {
-            background: #2980b9;
-            text-decoration: none;
-        }
-        .info-box {
-            background: #e8f4f8;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 5px 5px 0;
-        }
-        .file-list {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid #e9ecef;
-        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:#f0f4f8;color:#1a202c;line-height:1.6}
+        .header{background:#1e3a5f;color:white;padding:36px 24px 28px;text-align:center}
+        .badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:3px 14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:clamp(20px,4vw,30px);font-weight:700;margin-bottom:6px}
+        .header p{font-size:14px;color:rgba(255,255,255,.7)}
+        .body{max-width:860px;margin:32px auto;padding:0 20px}
+        .card{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:24px;margin-bottom:20px}
+        h2{font-size:17px;font-weight:600;color:#1e3a5f;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+        .desc{font-size:15px;color:#4a5568;background:#f7fafc;border-left:4px solid #3b82f6;padding:14px 16px;border-radius:0 8px 8px 0}
+        .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+        .tag{background:#eff6ff;color:#1d4ed8;border-radius:6px;font-size:12px;padding:4px 10px;font-weight:500}
+        .file-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+        .file-list li{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px}
+        .file-list li::before{content:"C";background:#1e3a5f;color:white;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+        .file-list a{color:#1e3a5f;font-family:"Courier New",monospace;font-size:13px;font-weight:600;text-decoration:none}
+        .file-list a:hover{text-decoration:underline;color:#3b82f6}
+        .cmd-block{background:#1e293b;border-radius:8px;overflow:hidden;margin-bottom:10px}
+        .cmd-label{background:#0f172a;color:#64748b;font-size:10px;padding:6px 14px;letter-spacing:.06em;text-transform:uppercase}
+        .cmd-block pre{color:#e2e8f0;padding:12px 16px;font-family:"Courier New",monospace;font-size:13px;overflow-x:auto}
+        .cmd-block code{color:#7dd3fc}
+        img{max-width:100%;height:auto;border:1px solid #e2e8f0;border-radius:8px;margin:8px 0;display:block}
+        .back-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#1e3a5f;color:white;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;margin-top:8px}
+        .back-btn:hover{background:#2d5a8e}
+        .empty-ev{color:#a0aec0;font-size:14px;font-style:italic;padding:16px;background:#f8fafc;border-radius:8px;border:1px dashed #e2e8f0}
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Actividad 06: Matrices</h1>
+<div class="header">
+    <div class="badge">Actividad 06</div>
+    <h1>Matrices</h1>
+    <p>Programación Estructurada en C · Mateo Loyo Martinez</p>
+</div>
+<div class="body">
 
-        <div class="info-box">
-            <strong>Descripción:</strong> Programas que trabajan con matrices bidimensionales y operaciones matriciales.
-        </div>
+    <div class="card">
+        <h2>Descripción</h2>
+        <p class="desc">Programas que demuestran la declaración, inicialización, acceso y manejo de matrices bidimensionales en lenguaje C, incluyendo el uso de matrices de caracteres, análisis de direcciones de memoria y manejo de archivos con matrices.</p>
+    </div>
 
+    <div class="card">
         <h2>Temas aplicados</h2>
-        <ul>
-        <li>Matrices bidimensionales</li>
-        <li>Recorrido de matrices</li>
-        </ul>
-
-        <h2>Código fuente</h2>
-        <div class="file-list">
-            <ul>
-        <li><a href="./Codigo/File_Matriz.c">File_Matriz.c</a></li>
-        <li><a href="./Codigo/Matriz_Nombre_Completo.c">Matriz_Nombre_Completo.c</a></li>
-        <li><a href="./Codigo/Matriz.c">Matriz.c</a></li>
-
-            </ul>
+        <div class="tags">
+            <span class="tag">matrices</span>
+            <span class="tag">ciclos anidados</span>
+            <span class="tag">direcciones de memoria</span>
+            <span class="tag">manejo de archivos</span>
+            <span class="tag">cadenas de caracteres</span>
         </div>
+    </div>
 
+    <div class="card">
+        <h2>Código fuente</h2>
+        <ul class="file-list">
+            <li><a href="./Codigo/Matriz.c">Matriz.c</a></li>
+            <li><a href="./Codigo/Matriz_Nombre_Completo.c">Matriz_Nombre_Completo.c</a></li>
+            <li><a href="./Codigo/File_Martriz.c">File_Martriz.c</a></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Compilación</h2>
+        <div class="cmd-block">
+            <div class="cmd-label">compilación</div>
+            <pre><code>gcc Matriz.c -o matriz</code></pre>
+        </div>
+        <div class="cmd-block">
+            <div class="cmd-label">compilación</div>
+            <pre><code>gcc Matriz_Nombre_Completo.c -o matriz_nombre</code></pre>
+        </div>
+        <div class="cmd-block">
+            <div class="cmd-label">compilación</div>
+            <pre><code>gcc File_Martriz.c -o file_matriz</code></pre>
+        </div>
+        <h2 style="margin-top:20px">Ejecución</h2>
+        <div class="cmd-block">
+            <div class="cmd-label">terminal</div>
+            <pre><code>./matriz</code></pre>
+        </div>
+        <div class="cmd-block">
+            <div class="cmd-label">terminal</div>
+            <pre><code>./matriz_nombre</code></pre>
+        </div>
+        <div class="cmd-block">
+            <div class="cmd-label">terminal</div>
+            <pre><code>./file_matriz</code></pre>
+        </div>
+    </div>
+
+    <div class="card">
         <h2>Evidencias de funcionamiento</h2>
         <img src="./Documentacion/Terminal_File_Matriz.png" alt="Terminal_File_Matriz.png">
         <img src="./Documentacion/Terminal_Matriz_Nombre_Completo.png" alt="Terminal_Matriz_Nombre_Completo.png">
         <img src="./Documentacion/Terminal_Matriz.png" alt="Terminal_Matriz.png">
-
-
-        
-
-        <h2>Reportes y notas</h2><div class='file-list'><ul>        <li><a href="./Documentacion/reporte_actividad_06.txt">reporte_actividad_06.txt</a></li>
-</ul></div>
-
-        <h2>Compilación (ejemplo)</h2>
-        <pre><code>gcc Codigo/File_Matriz.c -o programa_06</code></pre>
-
-        <h2>Ejecución</h2>
-        <pre><code>./programa_06</code></pre>
-
-        <div class="volver">
-            <a href="../">← Volver al inicio</a>
-        </div>
     </div>
+
+    <a class="back-btn" href="../">← Volver al inicio</a>
+</div>
 </body>
 </html>
